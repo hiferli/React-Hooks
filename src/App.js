@@ -1,7 +1,9 @@
 import React , {useState} from 'react';
 
 function App() {
-  const [count , setCount] = useState(5);
+  const [count , setCount] = useState(() => {
+    return 5;
+  });
 
   function incrementCount() {
     setCount(previousCount => previousCount + 1);
