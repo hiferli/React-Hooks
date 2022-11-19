@@ -8,14 +8,14 @@ function App() {
   function incrementCount() {
     // setCount(previousCount => previousCount + 1);
     setState(previousState => {
-      return {count: previousState.count + 1 , theme};
+      return {...previousState , count: previousState.count + 1};
     })
   }
   
   function decrementCount() {
     // setCount(previousCount => previousCount - 1);
     setState(previousState => {
-      return {count: previousState.count - 1 , theme};
+      return {...previousState , count: previousState.count - 1};
     })
   }
 
